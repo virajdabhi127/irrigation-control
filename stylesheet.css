@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/WorkSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+html{ font-size: 62.5%;}
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    display: flex;
+    font-family: 'WorkSans', system-ui, sans-serif;
+    background-color: rgb(86, 146, 214);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.head{
+    max-width: 100rem;     
+    width: 100%;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    margin: 0 auto;       
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.head1{
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lang{
+    margin-left: auto;
+}
+
+.options{
+    margin: 2rem;
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+.btn01{
+    margin: 2rem 0;
+}
+.time, .days{
+    margin-left: 3rem;
+}
+.options, .btn1, .btn2, .radio-group {
+    font-size: 1.75rem;
+}
+.crop, .time, .days{
+    font-size: 1.5rem;
+}
+input{
+    margin-right: 0.8rem;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1.5rem;
+    margin-left: 2rem;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+}
