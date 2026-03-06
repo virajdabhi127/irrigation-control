@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('WorkSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+html{ 
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'WorkSans', system-ui, sans-serif;
+    background:
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url("farm.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+.head{    
+    width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.main{
+    max-width: 100rem;     
+    width: 100%;
+    padding: 3rem;
+    padding-bottom: 2rem;
+    background: rgba(20, 30, 20, 0.75);
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
+    color: white;
+    margin: 0 auto;       
+    align-items: center;
+}
+.dash1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.alarmHistoryHidden{
+  display:none;
+}
+
+.alarmHistoryVisible{
+  display:block;
+}
+#alarmHistoryTitle{
+    margin-left: 0;
+    font-weight: 500;
+    font-size: 1.65rem;
+    cursor: pointer;
+}
+#alarmHistoryList{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.35rem;
+    color: #fff;
+}
+#resetAlarmsBtn{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    background-color: #0f1a0f;
+}
+.alarmHistoryBox{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;;
+  position:relative;
+}
+
+.navList {
+    width: 100%;
+    border-radius: 0.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: rgba(23, 34, 23, 0.75);
+}
+.dash{
+    margin-top: 1rem;
+    display: flex;
+}
+.navList li a {
+  display: block;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.navList li a:hover, .navList li a:focus {
+  background-color: #111111;
+}
+.navList li:last-child{
+    margin-left: auto;
+}
+.active{
+    background-color: #111111;
+}
+.status{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+.statli{
+    display: flex;
+    padding: 1rem 0;
+}
+.statli1{
+    display: flex;
+    flex-direction: column;
+}
+.alarm{
+    display: flex;
+}
+#alarmState{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0 1em;
+}
+.alarmItem{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.selections{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+span{
+    margin-left: 1rem;
+}
+hr{
+    margin-top: 1rem;
+    height: 0.2rem;
+    background-color: #111111;
+}
+h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+}
+.lang{
+    height: 2.5rem;
+    align-self: flex-end;    
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.langSelect{
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    background-color: #d4d3d3;
+}
+.onlineLED .bell{
+    color:#4cff4c;
+}
+
+.offlineLED .bell{
+    color:#ff4c4c;
+    animation: blink 1.3s infinite;
+}
+a{
+    text-decoration: none;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0.2;
+    }
+}
+@media (max-width: 600px){
+    html{
+        background: #0f1a0f; 
+    }
+    body{
+       min-height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .main{
+        max-width:95%;
+        padding:2rem;
+    }
+    h1{
+        text-align:center;
+        font-size:2rem;
+        margin-top:0.5rem;
+    }
+    .head{
+        align-items:center;
+    }
+    .lang{
+        justify-content:flex-end;
+    }
+    .langSelect{
+        font-size: 1rem;
+    }
+    .navList{
+        justify-content:center;
+    }
+    .navList li a{
+        font-size:1.3rem;
+        padding:1rem 1.2rem;
+    }
+    .status{
+        font-size:1.4rem;
+    }
+    .statli{
+        gap:0.3rem;
+        padding:0.8rem 0;
+    }
+    span{
+        margin-left:0;
+    }
+    #alarmHistoryTitle{
+    font-size: 1.3rem;
+    }
+    #cropLabel, #daysLabel, #timeLabel, #selectedCrop, #selectedTime, #selectedDays{
+        font-size: 1.1rem;
+    }
+    .alarm{
+        align-items: center;
+    }
+    #alarmState{
+        font-size: 1.1rem;
+    }
+    #alarmHistoryList{
+        font-size: 1.1rem;
+        margin: 0.7rem 0;
+    }
+
+    #resetAlarmsBtn{
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
