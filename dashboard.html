@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="stylesheetDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <div class="userBox">
+                <i class="fa-solid fa-user"></i>
+                <span id="loggedUser"></span>
+            </div>
+            <div class="lang">
+                <select id="languageSelect" class="langSelect" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="gu">ગુજરાતી</option>
+                    <option value="mr">मराठी</option>
+                    <option value="bn">বাংলা</option>
+                </select>
+            </div>
+            <h1>HELLO FARMER</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="navList">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="index.html">Control</a></li>
+                <li><a href="#" class="btn3" id="logoutBtn" onclick="logout()">Logout</a></li>
+            </ul>           
+        </nav>
+        <hr>
+        <div class="dash1">
+            <div class="dash">
+                <ul class="status">
+                    <li class="statli1">
+                        <div class="alarm">
+                            <span id="alarmLabel">Active alarms :</span><div id="alarmState"></div>
+                        </div>
+                    </li>
+                    <li class="statli"><span id="modeLabel">Mode selected :</span><span id="modeSelect">--</span></li>
+                    <li class="statli1"><span id="selectionLabel">Current selection :</span>
+                        <div class="selections">
+                            <div><span id="cropLabel">Crop :</span><span id="selectedCrop">--</span></div>
+                            <div><span id="timeLabel">Time :</span><span id="selectedTime">--</span></div>
+                            <div><span id="daysLabel">Days :</span><span id="selectedDays">--</span></div>
+                        </div>
+                    </li>
+                    <li class="statli"><span id="voltageLabel">Battery Voltage :</span><span id="batVol">--</span></li>    
+                    <li class="statli"><span id="sourceLabel">Source :</span><span id="src">--</span></li>
+                    <li class="statli"><span id="pumpLabel">Pump :</span><span id="pumpState">--</span></li>
+                </ul>
+            </div>
+            <div class="alarmHistoryBox">
+                <span id="alarmHistoryTitle">Alarm History :</span>
+                <div class="alarmHistoryHidden" id="alarmHistoryList1">
+                    <div id="alarmHistoryList"></div>
+                    <a href=# id="resetAlarmsBtn">Reset</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+
+</body>
+</html>
